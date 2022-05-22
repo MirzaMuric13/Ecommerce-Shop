@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./categories.css">
+    <script src="https://kit.fontawesome.com/f2e27b71ab.js" crossorigin="anonymous"></script>
+    <title>Account - RedStore | Ecommerce Website Design</title>
+</head>
+
+<body>
+        <div class="contanier">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="text.html"><img src="./images/logo.png" alt="logos"></a>
+                </div>
+
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="text.html">Home</a></li>
+                        <li><a href="products.html">Product</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+               <a href="Cart.html"> <img src="./images/cart.png" width="30px" height="30px" alt="cart"></a>
+                <img src="./images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+
+        <!-- Accoount Page-->
+
+        <div class="account-page">
+            <div class="contanier">
+                <div class="main">
+                    <div class="main-column">
+                        <img src="./images/image1.png" width="100%">
+                    </div>   
+                    <div class="main-column">
+                        <div class="form-contanier">
+                            <div class="form-btn">
+                                <span onclick="login()">Log in</span>
+                                <span onclick="register()">Register</span>
+                                <hr id="indicator">
+                            </div>
+
+                            <form id="loginForm">
+                                <input type="text" placeholder="Username">
+                                <input type="password" placeholder="Password">
+                                <button type="submit" class="btn">Log In</button>
+                                <br>
+                                <a href="">Forgot Password</a>
+                            </form>
+
+                            <form id="RegForm">
+                                <input type="text" placeholder="Username">
+                                <input type="email" placeholder="Email">
+                                <input type="password" placeholder="Password">
+                                <button type="submit" class="btn">Register</button>
+                            </form>
+                        </div>
+                    </div>               
+            </div>
+        </div>
+        </div>
+
+    <!-- Footer-->
+
+    <div class="footer">
+
+        <div class="contanier">
+
+            <div class="main">
+
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App For Androit and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="./images/play-store.png" alt="">
+                        <img src="./images/app-store.png" alt="">
+                    </div>
+                </div>
+
+                <div class="footer-col-2">
+                    <img src="./images/logo-white.png" alt="">
+                    <p>Our Purpose Is T oSustainably Make the Pleasure and
+                        Benefits of Sports Accessible to the Many.</p>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policu</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr>
+            <p class="copyright">Copyright 2020 - Easy Tutorials</p>
+
+        </div>
+
+    </div>
+
+    <!--JavaScript for toggle menu-->
+
+    <script>
+        var menuItems = document.getElementById("MenuItems");
+        var checkMenuHeight = false
+
+        menuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (menuItems.style.maxHeight = "0px") {
+                checkMenuHeight = !checkMenuHeight
+            }
+            changeMenu()
+        }
+
+        function changeMenu(){
+            if(checkMenuHeight === true ){
+                menuItems.style.maxHeight = "200px"
+            }else{
+                menuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+    <!--JavaScript for toggle form-->
+
+    <script>
+
+        var loginForm = document.getElementById("loginForm")
+        var RegForm = document.getElementById("RegForm")
+        var indicator = document.getElementById("indicator")
+
+        function register() {
+            RegForm.style.transform = "translateX(0px)";
+            loginForm.style.transform = "translateX(0px)";
+            indicator.style.transform = "translateX(100px)";
+        }
+
+        function login() {
+            RegForm.style.transform = "translateX(300px)";
+            loginForm.style.transform = "translateX(300px)";
+            indicator.style.transform = "translateX(0px)";
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
